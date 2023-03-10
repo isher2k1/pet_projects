@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  body {
+    width: 50%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #description {
+    width: 100%;
+  }
+  #comment {
+    width: 100%;
+  }
+</style>
+<body>
+<h1>Add Task</h1>
+<form action="/editTask">
+  <input type="hidden" value="%ID%" name="id">
+  <label for="type">Task Type:</label>
+  <select id="type" name="task_type">
+    <option %TASK_TYPE_PLANTING% value="planting">Planting</option>
+    <option %TASK_TYPE_TREATMENT% value="treatment">Treatment</option>
+    <option %TASK_TYPE_ARTISTIC% value="artistic processing">Artistic processing</option>
+    <option %TASK_TYPE_DESTRUCTION% value="destruction">Destruction</option>
+  </select>
+  <label for="description">Description:</label>
+  <textarea id="description" name="description" rows="10" cols="30">%DESCRIPTION%</textarea>
+  <label for="comment">Comment:</label>
+  <textarea id="comment" name="comment" rows="10" cols="30">%COMMENT%</textarea>
+  <select id="status" name="status">
+    <option %STATUS_TO_DO% value="To do">To do</option>
+    <option %STATUS_IN_PROGRESS% value="In progress">In progress</option>
+    <option %STATUS_IN_FINISHED% value="Finished">Finished</option>
+  </select>
+  <input type="hidden" name="edit" value="true">
+  <input type="submit">
+</form>
+<form action="/main">
+  <input type="submit" value="Cancel">
+</form>
+</body>
+</html>

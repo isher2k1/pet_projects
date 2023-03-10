@@ -1,0 +1,19 @@
+-- Table: public.tasks
+
+-- DROP TABLE public.tasks;
+
+CREATE TABLE public.tasks
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    task_type character varying COLLATE pg_catalog."default" NOT NULL,
+    description character varying COLLATE pg_catalog."default" NOT NULL,
+    comment character varying COLLATE pg_catalog."default",
+    status character varying COLLATE pg_catalog."default" NOT NULL,
+    is_approved boolean NOT NULL,
+    CONSTRAINT task_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.tasks
+    OWNER to postgres;

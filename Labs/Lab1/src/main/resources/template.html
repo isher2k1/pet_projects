@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even){background-color: #f2f2f2}
+
+  th {
+    background-color: #04AA6D;
+    color: white;
+  }
+  #add, #edit {
+    margin: 3%;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  #add:active {
+    background-color: #4CAF89;
+  }
+
+  #edit:active {
+    background-color: #4CAF89;
+  }
+  .approve {
+    margin-left: 3%;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .approve:active {
+    background-color: #4CAF89;
+  }
+</style>
+
+<body>
+<a id="add" href="/addTask">Add Task</a>
+<br>
+<table style="width:100%">
+    <tr>
+        <th>Id</th>
+        <th>Type</th>
+        <th>Descr</th>
+        <th>Comment</th>
+        <th>Status</th>
+        <th>Approved</th>
+        <th>Actions</th>
+    </tr>
+    %CONTENT%
+</table>
+
+</body>
+</html>
