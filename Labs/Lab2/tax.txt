@@ -1,0 +1,8 @@
+taxFromMainJob:0.18
+taxFromAdditionalJob:0.18
+royaltyTax:0.2
+taxFromTheSaleOfProperty:0.05
+taxFromReceivingMoneyAndPropertyAsGift:0.05
+taxFromTransfersFromAbroad:0.05
+taxChildBenefits:0
+taxMaterialHelp:0

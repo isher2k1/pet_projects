@@ -1,0 +1,9 @@
+incomeFromMainJob:20000
+incomeFromAdditionalJob:10000
+royaltyIncome:400
+incomeFromTheSaleOfProperty:2000
+incomeFromReceivingMoneyAndPropertyAsGift:900
+incomeFromTransfersFromAbroad:5000
+childBenefits:2490
+materialHelp:1180
+countOfChild:2
