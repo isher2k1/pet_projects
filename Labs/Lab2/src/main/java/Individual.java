@@ -13,7 +13,6 @@ public class Individual {
         BufferedReader bReader = null;
         try {
             bReader = new BufferedReader(new FileReader(filename));
-            //bReader.close();
             incomes = new TreeMap<IncomeNames, Double>();
             incomes.put(IncomeNames.INCOME_FROM_MAIN_JOB, Double.parseDouble(bReader.readLine().split(":")[1]));
             incomes.put(IncomeNames.INCOME_FROM_ADDITIONAL_JOB, Double.parseDouble(bReader.readLine().split(":")[1]));

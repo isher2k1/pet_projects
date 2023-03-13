@@ -12,7 +12,6 @@ public class Taxes {
         BufferedReader bReader = null;
         try {
             bReader = new BufferedReader(new FileReader(filename));
-            //bReader.close();
             taxes = new TreeMap<TaxNames, Double>();
             taxes.put(TaxNames.TAX_FOR_MAIN_JOB, Double.parseDouble(bReader.readLine().split(":")[1]));
             taxes.put(TaxNames.TAX_FOR_ADDITIONAL_JOB, Double.parseDouble(bReader.readLine().split(":")[1]));
